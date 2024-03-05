@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge ONE Encriptador de Texto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <aside class="aside">
+            <div class="aside__sinInformacion ">
+                <img src="imgs/not found.svg" alt="no se encontro">
+                <div class="aside_informacion">
+                    <h1>Ningún mensaje fue encontrado</h1>
+                    <p class="aside__parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div> 
+            </div>
+            <div class="aside__encriptacion ocultar">
+                <p class="aside__mensaje">
+                </p>
+                <button class="aside__copiar">Copiar</button>
+            </div>
+        </aside>
+        <main class="main">
+            <img src="imgs/logo.png" alt="no se encontro nada">
+            <h1 class="main__titulo">Challenge ONE Encriptador de Texto</h1>
+            <textarea name="textarea" id="texto" cols="30" rows="5" placeholder="Texto a encriptar o desencriptar..."></textarea>
+            <div class="main__controles">
+                <span class="main__advertencia"><i class="bi bi-info-circle"></i> Solo letras minúsculas y sin acentos</span>
+                <div class="main__botones">
+                    <button class="encriptar">Encriptar</button>
+                    <button class="desencriptar">Desencriptar</button>
+                </div>
+            </div>
+            <span class="desarrollado">Desarrollado por Jose Felix Contreras Martínez</span>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body> 
+</html>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorPrimario: #2377e7;
+}
+
+body{
+    background-color: #282828;
+}
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    display: flex;
+    gap: 200px;
+    color: white;
+
+    font-family: "Roboto", sans-serif;
+}
+.aside{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+    border: 5px solid var(--colorPrimario);
+    box-shadow: 0px 0px 15px 0px var(--colorPrimario);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.aside__sinInformacion{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    transform: scale(1);
+    transition: 0.3s;
+}
+.aside__sinInformacion img{
+    width: 100%;
+}
+.aside__sinInformacion h1{
+    font-size: 1.8em;
+}
+.aside__sinInformacion .aside__parrafo{
+    font-style: italic;
+    opacity: 0.4;
+}
+.aside_informacion{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside__encriptacion{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    transform: scale(1);
+    transition: 0.3s;
+}
+.aside__mensaje{
+    width: 100%;
+    height: 200px;
+    text-align: start;
+    overflow-y: auto;
+    font-size: 1.1em;
+}
+.aside__copiar{
+    width: 100%;
+    background-color: var(--colorPrimario);
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    padding: 8px 0;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+.aside__copiar:hover{
+    box-shadow: 0px 0px 15px 0px var(--colorPrimario);
+
+}
+
+.ocultar{
+    transform: scale(0);
+    height: 0;
+}
+.main{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.main__titulo{
+    text-align: center;
+}
+#texto{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.4em;
+    background-color: transparent;
+    color: white;
+    resize: none;
+}
+#texto:focus{
+    outline: none;
+}
+.main__controles{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.main__botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.main__botones button{
+    background-color: var(--colorPrimario);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition:  0.5s;
+    color: white;
+    font-weight: 700;
+}
+.main__botones button:hover{
+    box-shadow: 0px 0px 15px 0px var(--colorPrimario);
+}
+.main img{
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.main__advertencia{
+    font-style: italic;
+    opacity: 0.4;
+}
+.desarrollado{
+    opacity: 0.3;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width:1000px) {
+    .contenedor{
+        padding: 20px;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:700px) {
+    .contenedor{
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+    }
+    .aside{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .aside__encriptacion{
+        gap: 5px;
+    }
+    .aside__sinInformacion img{
+        width: 120px;
+        margin: 0 auto;
+    }
+    .aside__sinInformacion h1{
+        font-size: 1.3em;
+    }
+    .aside__sinInformacion .aside__parrafo{
+        font-size: 15px;
+    }
+    .aside__mensaje{
+        width: 100%;
+        height: 130px;
+    }
+    .aside__copiar{
+        font-size: 1.2em;
+        padding: 6px 0;
+    }
+    .main{
+        width: 100%;
+        justify-content: start;
+        gap: 15px;
+    }
+    .main img{
+        width: 40px;
+    }
+    .main__titulo{
+        font-size: 25px;
+    }
+    .main__botones button{
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+}
